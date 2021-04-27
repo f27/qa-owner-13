@@ -7,10 +7,13 @@ import static org.aeonbits.owner.Config.LoadType.MERGE;
 @Config.LoadPolicy(MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/local_driver.properties",
-        "classpath:config/remote_driver.properties"
+        "classpath:config/driver.properties"
 })
 public interface DriverConfig extends Config{
+
+    @Key("web.browser.is.remote")
+    boolean webBrowserIsRemote();
+
     @Key("web.browser")
     String webBrowser();
 

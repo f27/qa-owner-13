@@ -37,7 +37,7 @@ public class DriverHelper {
     }
 
     public static boolean isRemoteWebDriver() {
-        return !driverConfig.webRemoteDriverUrlFormat().equals("");
+        return driverConfig.webBrowserIsRemote();
     }
 
     public static String getVideoUrl() {
